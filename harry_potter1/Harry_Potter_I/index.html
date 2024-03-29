@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+  
+    <script src="../assets/js/color-modes.js"></script>
+
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="this website is for the film: Harry Potter and the Philosopher's Stone"
+    />
+
+    <meta name="author" content="Mingze Tang and Bootstrap contributors" />
+  
+    <meta name="generator" content="Hugo 0.122.0" />
+
+    <title>Harry Potter I</title>
+
+    <link rel="icon" href="zhuoyi_li.ico" sizes="16x16" />
+
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <style>
+      .bd-placeholder-img {
+        background-image: url("hp.jpeg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img1 {
+        background-image: url("potter.jpeg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img2 {
+        background-image: url("ron.jpg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img3 {
+        background-image: url("hermione.jpg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img4 {
+        background-image: url("together1.jpg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img5 {
+        background-image: url("together2.webp");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      .bd-placeholder-img6 {
+        background-image: url("together3.jpg");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          background-image: url("hp.jpeg");
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+
+    <link href="carousel.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </symbol>
+    </svg>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HP</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Homepage</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Harry Potter and the Philosopher's Stone</h1>
+                <p class="opacity-75">click to see the full movie.</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://www.warnerbros.com/movies/harry-potter-and-sorcerers-stone"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Cast & Crew</h1>
+                <p>click to check the full Cast & Crew</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://www.imdb.com/title/tt0241527/fullcredits?ref_=tt_cl_sm"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Introduction of the Story</h1>
+                <p>click to get the introduction in wikipedia</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img1 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Harry Potter</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Amazon Official Website</h2>
+            <p>
+              Click to purchase the book Harry Potter and the Sorcerer's Stone.
+            </p>
+            <p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.amazon.com/s?k=harry+potter+and+the+philosopher%27s+stone&crid=1MH6SVV8NM7MZ&sprefix=%2Caps%2C517&ref=nb_sb_ss_recent_1_0_recent"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img2 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Ron Weasley</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Harry Potter Official Website</h2>
+            <p>
+              Click to follow author J.K. Rowling and her team's latest updates.
+            </p>
+            <p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.wizardingworld.com/"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img3 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Hermione Granger</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Github Group</h2>
+            <p>Click to contact our team.</p>
+            <p>
+              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Beginning: Entering the world of magic
+            </h2>
+            <h3>
+              <span class="text-body-secondary"
+                >The new life of the "Lightning Scar" boy</span
+              >
+            </h3>
+            <p class="lead">
+              Late one night, Albus Dumbledore and Minerva McGonagall,
+              professors at Hogwarts School of Witchcraft and Wizardry, along
+              with groundskeeper Rubeus Hagrid, deliver an orphaned infant
+              wizard named Harry Potter to his Muggle aunt and uncle, Petunia
+              and Vernon Dursley, his only living relatives.
+            </p>
+            <p class="lead">
+              Ten years later, just before Harry's eleventh birthday, owls begin
+              delivering letters addressed to him. When the abusive Dursleys
+              adamantly refuse to allow Harry to open any and flee to an island
+              hut, Hagrid arrives to personally deliver Harry's letter of
+              acceptance to Hogwarts. Hagrid also reveals that Harry's late
+              parents, James and Lily, were killed by a dark wizard named Lord
+              Voldemort. The killing curse that Voldemort had cast towards Harry
+              rebounded, destroying Voldemort's body and giving Harry the
+              lightning-bolt scar on his forehead. Hagrid then takes Harry to
+              Diagon Alley for school supplies and gives him a pet snowy owl
+              whom he names Hedwig. Harry buys a wand that is connected to
+              Voldemort's own wand.
+            </p>
+            <p class="lead">
+              At King's Cross, Harry boards the Hogwarts Express train, and
+              meets fellow first-years Ron Weasley and Hermione Granger during
+              the journey. Arriving at Hogwarts, Harry also meets Draco Malfoy,
+              who is from a wealthy wizard family; the two immediately form a
+              rivalry. The students assemble in the Great Hall where the Sorting
+              Hat sorts the first-years into four respective houses: Gryffindor,
+              Hufflepuff, Ravenclaw, and Slytherin. Harry is placed into
+              Gryffindor alongside Ron and Hermione, while Draco is placed into
+              Slytherin, a house noted for dark wizards.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="together1.jpg"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Development: Hidden conspiracies
+            </h2>
+            <h3>
+              <span class="text-body-secondary"
+                >The courage of the children</span
+              >
+            </h3>
+            <p class="lead">
+              As he studies magic, Harry learns more about his parents and
+              Voldemort, and his innate talent for broomstick flying gets him
+              recruited for the Gryffindor Quidditch team as the youngest Seeker
+              in a century. While returning to the Gryffindor common room, the
+              staircases change paths, leading Harry, Ron and Hermione to the
+              third floor, which is forbidden to students. There they discover a
+              giant three-headed dog named Fluffy. On Halloween, Ron insults
+              Hermione after she shows off in Charms class. Upset, she spends
+              the entire afternoon crying in the girls' bathroom. That evening,
+              a giant marauding troll enters it but Harry and Ron save Hermione;
+              they make up and become close friends after Hermione takes the
+              blame for the incident by saying she went looking for the troll.
+            </p>
+            <p class="lead">
+              The trio discover that Fluffy is guarding the philosopher's stone,
+              a magical object that can turn metal into gold and produce an
+              immortality elixir. Harry suspects that Severus Snape, the Potions
+              teacher and head of Slytherin, wants the stone to return Voldemort
+              to physical form. When Hagrid accidentally reveals that music puts
+              Fluffy asleep, Harry, Ron and Hermione decide to find the stone
+              before Snape. Fluffy is already asleep, but the trio face other
+              barriers, including a deadly plant called Devil's Snare, a room
+              filled with aggressive flying keys, and a giant chess game that
+              knocks out Ron.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img
+              src="together2.webp"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Ending: Dispelling the mist
+            </h2>
+            <h3>
+              <span class="text-body-secondary">The triumph of friendship</span>
+            </h3>
+            <p class="lead">
+              After overcoming the barriers, Harry encounters Defence Against
+              the Dark Arts teacher Quirinus Quirrell, who wants the stone;
+              Snape had figured it out and had been protecting Harry. Quirrell
+              removes his turban to reveal a weakened Voldemort living on the
+              back of his head. Dumbledore's protective enchantment places the
+              stone in Harry's possession. Voldemort attempts to bargain the
+              stone from Harry in exchange for resurrecting his parents, but
+              Harry sees through his trick and refuses. Quirrell attempts to
+              kill Harry. When Harry touches Quirrell's skin, it burns Quirrell,
+              reducing him to ashes. Voldemort's soul rises from the pile and
+              escapes, knocking out Harry as it passes through him.
+            </p>
+            <p class="lead">
+              Harry recovers in the school infirmary. Dumbledore tells him the
+              stone has been destroyed to prevent misuse, and that Ron and
+              Hermione are safe. He also reveals how Harry defeated Quirrell:
+              when Lily died to save Harry, a love-based protection against
+              Voldemort was placed on him. At the end-of-school-year feast,
+              Harry, Ron, and Hermione are rewarded extra house points for their
+              heroism, tying Gryffindor for first place with Slytherin;
+              Dumbledore then awards ten points to their housemate Neville
+              Longbottom for having had the courage to stand up to the trio,
+              granting Gryffindor the House Cup. Harry returns to the Dursleys
+              for the summer, happy to finally have a real home at Hogwarts.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="together3.jpg"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+      </footer>
+    </main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

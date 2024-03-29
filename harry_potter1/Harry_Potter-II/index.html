@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="this website is for the film: Harry Potter and the Chamber of Secrets"
+    />
+
+    <meta name="author" content="Mingze Tang and Bootstrap contributors" />
+
+    <meta name="generator" content="Hugo 0.122.0" />
+
+    <title>Harry Potter II</title>
+
+    <link rel="icon" href="zhuoyi_li.ico" sizes="16x16" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        background-image: url("hp.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img1 {
+        background-image: url("potter.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img2 {
+        background-image: url("ron.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img3 {
+        background-image: url("hermione.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img4 {
+        background-image: url("together1.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img5 {
+        background-image: url("together2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bd-placeholder-img6 {
+        background-image: url("together3.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          background-image: url("hp.jpg");
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+  
+    <link href="carousel.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </symbol>
+    </svg>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HP</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Homepage</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Harry Potter and the chamber of secrets</h1>
+                <p class="opacity-75">click to see the full movie.</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://www.warnerbros.com/movies/harry-potter-and-chamber-secrets"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Cast & Crew</h1>
+                <p>click to check the full Cast & Crew</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://www.imdb.com/title/tt0295297/fullcredits/?ref_=tt_ql_1"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Introduction of the Story</h1>
+                <p>click to get the introduction in wikipedia</p>
+                <p>
+                  <a
+                    class="btn btn-lg btn-primary"
+                    href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Chamber_of_Secrets_(film)"
+                    >Jump to</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img1 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Harry Potter</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Amazon Official Website</h2>
+            <p>
+              Click to purchase the book Harry Potter and the chamber of
+              secrets.
+            </p>
+            <p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.amazon.com/s?k=harry+potter+and+the+chamber+of+secrets+book&crid=10K9W5CBKSHMR&sprefix=harry+potter+and+the+chamber+of+secrets+%2Caps%2C1438&ref=nb_sb_ss_ts-doa-p_5_40"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img2 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Ron Weasley</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Harry Potter Official Website</h2>
+            <p>
+              Click to follow author J.K. Rowling and her team's latest updates.
+            </p>
+            <p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.wizardingworld.com/"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img3 rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Hermione Granger</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              />
+            </svg>
+            <h2 class="fw-normal">Github Group</h2>
+            <p>Click to contact our team.</p>
+            <p>
+              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Beginning: Twisted second school year
+            </h2>
+            <h3>
+              <span class="text-body-secondary">New challenges</span>
+            </h3>
+            <p class="lead">
+              Spending the summer with the Dursleys, Harry Potter meets Dobby, a
+              house-elf who warns him not to return to Hogwarts or danger will
+              strike. When Harry refuses, Dobby sabotages an important dinner
+              for the Dursleys, who lock up Harry to prevent his departure.
+              Harry's friend Ron Weasley and his brothers Fred and George rescue
+              him in their father's flying car.
+            </p>
+            <p class="lead">
+              In Diagon Alley, Harry, the Weasleys and Hermione Granger notice a
+              book-signing by Gilderoy Lockhart, Hogwarts' new Defence Against
+              the Dark Arts teacher. There, Harry sees Draco Malfoy's father,
+              Lucius, slip a book into Ginny Weasley's cauldron. After being
+              blocked from entering Platform Nine and Three-Quarters at King's
+              Cross railway station, Harry and Ron take the car to Hogwarts.
+              There, they crash into the Whomping Willow, breaking Ron's wand,
+              and receive detention.
+            </p>
+            <p class="lead">
+              In detention, Harry hears a strange voice and later finds
+              caretaker Argus Filch's cat, Mrs Norris, petrified beside a
+              message written in blood: "The Chamber of Secrets has been opened,
+              enemies of the heir... beware." One of Hogwarts' founders, Salazar
+              Slytherin, supposedly constructed a secret Chamber containing a
+              monster that only his heir can control, capable of purging the
+              school of Muggle-born students. To solve this mystery, Harry, Ron,
+              and Hermione plan to question Malfoy, using polyjuice potion,
+              which they brew in a bathroom haunted by Moaning Myrtle, a ghost.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="together1.jpg"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Development: Hidden danger
+            </h2>
+            <h3>
+              <span class="text-body-secondary">Trust and exploration</span>
+            </h3>
+            <p class="lead">
+              During a Quidditch game, Harry's arm is broken by a rogue Bludger.
+              Dobby visits him in the infirmary and reveals that he closed the
+              barrier to Platform Nine and Three-Quarters and made the Bludger
+              chase Harry to force him to leave the school. He also reveals that
+              the Chamber had been opened in the past. When Harry communicates
+              with a snake, the school starts to believe he is the heir.
+              Disguised as two of Malfoy's friends, Harry and Ron learn he is
+              not the heir, but come to know that a Muggle-born girl died when
+              the Chamber was last opened. Harry finds an enchanted diary owned
+              by former student Tom Riddle, who opened the Chamber and blamed
+              Rubeus Hagrid, leading to his expulsion. When the diary is stolen
+              and Hermione is petrified, Harry and Ron question Hagrid.
+              Professor Dumbledore, Minister of Magic Cornelius Fudge, and
+              Lucius arrive to take Hagrid to Azkaban and remove Dumbledore from
+              office, but he discreetly tells the boys to "follow the spiders".
+              In the Forbidden Forest, Harry and Ron meet Hagrid's giant pet
+              spider, Aragog, who reveals Hagrid's innocence and provides a
+              small clue of the Chamber's monster.
+            </p>
+            <p class="lead">
+              A book page in Hermione's hand identifies the monster as a
+              basilisk, a giant serpent that kills people who make direct eye
+              contact with it; the petrified victims only saw it indirectly. The
+              school staff learns Ginny has been taken into the Chamber, and
+              nominate Lockhart to save her. Harry and Ron find Lockhart
+              preparing to flee, exposing him as a fraud. Deducing that Myrtle
+              was the Muggle-born girl that the basilisk killed, they find the
+              Chamber's entrance in the bathroom she haunts. Once inside,
+              Lockhart tries to stop Harry and Ron by using a memory charm.
+              However, because he seized Ron's broken wand, the spell backfires,
+              erasing Lockhart's memory and causing a cave-in that separates
+              Harry from Ron and Lockhart.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img
+              src="together2.jpg"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              End: The heir of Slytherin
+            </h2>
+            <h3>
+              <span class="text-body-secondary"
+                >Defeated the mysterious person once again</span
+              >
+            </h3>
+            <p class="lead">
+              Harry enters the Chamber alone and finds Ginny unconscious,
+              guarded by Riddle, who turns out to be Slytherin's heir and
+              Voldemort's younger self, and he used the diary to manipulate
+              Ginny into reopening the Chamber. After Harry expresses his
+              loyalty to Dumbledore, the latter's pet phoenix Fawkes arrives
+              with the Sorting Hat, causing Riddle to summon the basilisk.
+              Fawkes blinds the basilisk, and the Sorting Hat produces the Sword
+              of Gryffindor, with which Harry battles the basilisk. After a
+              struggle, he kills it but is poisoned by one of its fangs.
+            </p>
+            <p class="lead">
+              Despite his injury, Harry stabs the diary with the basilisk fang,
+              destroying Riddle and reviving Ginny. Fawkes' tears heal Harry,
+              who returns to Hogwarts with his friends and a baffled Lockhart,
+              earning Dumbledore's praise and Hagrid's release. Harry accuses
+              Lucius, Dobby's master, of planting the diary in Ginny's cauldron,
+              and tricks him into freeing Dobby. The basilisk's victims are
+              healed, Hermione reunites with Harry and Ron, and Hagrid is
+              released from Azkaban.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="together3.jpg"
+              class="bd-placeholder-img img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="NULL"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+      </footer>
+    </main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
