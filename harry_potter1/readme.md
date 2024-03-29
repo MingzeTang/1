@@ -1,3 +1,4 @@
-HP,HOMEPAGE,LINK,GITHUB还没有具体链接
-搜索功能尚未开发
+maybe develop the function of mode changing
+the link to homepage is still empty
+the searching function is useless now
 to be continue...
